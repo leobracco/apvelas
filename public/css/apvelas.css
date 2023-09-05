@@ -1,0 +1,149 @@
+/* Estilo básico para el contenedor */
+.col-md-2 {
+    position: relative;
+    margin: 1rem 0;
+    overflow: hidden; /* Ocultar partes de la imagen al hacer zoom */
+    transition: transform .2s; /* Efecto suave de zoom */
+}
+
+.col-md-2:hover {
+    transform: scale(1.05); /* Zoom en hover */
+    z-index: 1; /* Colocar por encima de otras imágenes al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de elevación */
+}
+
+/* Estilo para las imágenes */
+.col-md-2 img {
+    width: 100%; /* Asegurarse de que la imagen cubra todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    transition: .2s; /* Efecto suave para el filtro */
+}
+
+.col-md-2:hover img {
+    filter: brightness(80%); /* Oscurecer un poco la imagen al hacer hover */
+}
+.filtro {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filtro:hover {
+    background-color: #ddd;
+}
+
+/* Ocultar barras de desplazamiento */
+.galeria::-webkit-scrollbar {
+    display: none;
+}
+.galeria {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    overflow: hidden;        /* Ocultar cualquier parte de la imagen que exceda el contenedor */
+    margin-bottom: 15px;     /* Espacio entre imágenes */
+    position: relative;      /* Establecer posición relativa para que las imágenes absolutas se basen en este contenedor */
+}
+
+.galeria img {
+    transition: transform 0.3s ease; 
+    cursor: pointer; 
+    width: 100%;      /* Asegurarse de que las imágenes se adapten al ancho del contenedor */
+    height: 100%;     /* Asegurarse de que las imágenes se adapten al alto del contenedor */
+    object-fit: cover;/* Asegurarse de que las imágenes se escale correctamente */
+    position: absolute; /* Esto permite que la imagen se centre correctamente */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar la imagen */
+	border-radius: 10px;  /* Redondear las esquinas */
+}
+
+.galeria img:hover {
+    transform: scale(1.1) translate(-50%, -50%); /* Añadir efecto de agrandamiento mientras se centra */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+    /* Ajustar el tamaño de las columnas para que ocupen el ancho completo en móviles */
+    .galeria {
+        width: 100%;
+    }
+}
+
+.imagen-contenedor {
+    position: relative;
+}
+
+.imagen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Transparencia negra para mejorar la legibilidad del texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.imagen-contenedor:hover .imagen-overlay {
+    opacity: 1;
+}
+
+.precio {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn.agregar-carrito {
+    background-color: #FF5733; /* Color naranja */
+    border: none;
+    padding: 5px 15px;
+}
+.imagen-contenedor {
+    position: relative;
+}
+
+.producto-overlay {
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.producto-nombre {
+    font-weight: bold;
+}
+
+.agregar-carrito {
+    margin-top: 5px;
+}
+#btnTop {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* Posición desde abajo */
+    right: 30px; /* Posición desde la derecha */
+    z-index: 99; /* Estar por encima de la mayoría de los elementos */
+    border: none; 
+    outline: none;
+    background-color: #555; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Estilo del cursor */
+    padding: 10px 15px; 
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+#btnTop:hover {
+    background-color: #333; /* Cambiar color al pasar el cursor por encima */
+}

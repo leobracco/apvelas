@@ -1,0 +1,51 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #a7b3a9;
+}
+
+/* Estilo para el contenedor del catálogo */
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo para cada producto, similar a una publicación de Instagram */
+.producto {
+    width: 300px;
+    margin: 15px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.veia-card {
+    margin: 0;
+}
+
+.veia-card .card-body {
+    padding: 15px;
+}
+
+.veia-img-container {
+    width: 200px;  /* Establece el ancho según tus necesidades */
+    overflow: hidden;
+}
+
+
+.veia-img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Estilo para la descripción del producto */
+.descripcion-producto {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin-top: 10px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="galeria.js"></script>
+    <style>
+        #imagesList img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        #imagesList img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<div id="uploadContainer">
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="imageFiles" multiple>
+        <input type="submit" value="Subir" name="submit">
+    </form>
+</div>
+<div class="container mt-5">
+    <h2>Galería de Imágenes</h2>
+    <div class="row mt-4" id="imagesList">
+        <!-- Las imágenes se insertarán aquí -->
+    </div>
+</div>
+
+<script>
+   
+</script>
+
+</body>
+</html>
